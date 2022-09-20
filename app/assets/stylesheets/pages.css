@@ -1,0 +1,480 @@
+body{
+  font-family: 'Just Another Hand', cursive;
+}
+
+main{
+    background: url('fundo_main.jpg') no-repeat center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+}
+
+
+.anim750{
+    transition: 1s ease-out;
+}
+
+  #Awesome{
+      position: relative;
+      width: 360px;
+      height: 360px;
+      margin: 0 auto;
+
+    backface-visibility: hidden;
+  }
+
+  #Awesome .sticky{
+      transform: rotate(45deg);
+  }
+
+  #Awesome:hover .sticky{
+      transform: rotate(10deg);
+  }
+
+  #Awesome .sticky{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:360px;
+      height: 360px;
+      margin-top: 2em;
+  }
+
+  #Awesome .reveal .circle{
+    box-shadow: 0 1px 0px rgba(0,0,0,.15);
+    line-height: 280px;
+    text-align: center;
+  }
+
+  #Awesome .reveal .circle{
+      background: #ffffff87;
+  }
+
+  #Awesome .circle_wrapper{
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      left: 0px;
+      top: 0px;
+      overflow: hidden;
+      margin-top: 2em;
+  }
+
+  #Awesome .circle{
+      position: absolute;
+      width: 280px;
+      height:  280px;
+      margin: 40px;
+      border-radius: 999px;
+      font-family: 'Just Another Hand', cursive;
+      font-size: 40px;
+  }
+
+  #Awesome .back{
+      height: 20px;
+      top: 25px;
+  }
+
+  #Awesome:hover .back{
+      height: 180px;
+      top: 180px;
+  }
+
+  #Awesome .back .circle{
+      margin-top: -260px;
+      background-color: #fbec3f;
+      background-image: -webkit-linear-gradient(bottom, rgba(251,236,63,.0), rgba(255,255,255,.8));
+  }
+
+  #Awesome:hover .back .circle{
+        margin-top: -100px;
+        -webkit-animation: wobble-hor-bottom 1.3s both;
+        animation: wobble-hor-bottom 1.3s both;
+    }
+
+  #Awesome:hover{
+    cursor: pointer;
+  }
+
+  #Awesome .front{
+      height: 300px;
+      bottom: 0;
+      top: auto;
+      -webkit-box-shadow: 0 -140px 20px -140px rgba(0,0,0,.3);
+  }
+
+  #Awesome:hover .front{
+      height: 140px;
+      -webkit-box-shadow: 0 -60px 10px -60px rgba(0,0,0,.1);
+  }
+
+  #Awesome .front .circle{
+      margin-top: -20px;
+      background: #ffd900d5;
+
+      background-image: -webkit-linear-gradient(bottom, rgba(251,236,63,.0) 75%, #f7bb37 95%);
+    background-image: -moz-linear-gradient(bottom, rgba(251,236,63,.0) 75%, #f7bb37 95%);
+    background-image: linear-gradient(bottom, rgba(251,236,63,.0) 75%, #f7bb37 95%);
+  }
+
+  #Awesome h4{
+    text-align: center;
+    width: 360px;
+    transition: opacity 50ms linear 400ms;
+    font-size: 40px;
+  }
+
+  #Awesome:hover h4{
+      opacity: 0;
+      transition: opacity 50ms linear 200ms;
+
+  }
+
+  #Awesome:hover .img_sticker{
+    opacity: 0;
+    transition: opacity 1s linear 300ms;
+    -webkit-animation: flip-out-diag-1-bl 0.45s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: flip-out-diag-1-bl 0.45s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+
+  #Awesome:hover .front .circle{
+      margin-top: -180px;
+      background-color: #e2d439;
+      background-position: 0 200px;
+  }
+
+  .texto_topo_sticker{
+    position: absolute;
+    font-family: 'Just Another Hand', cursive;
+    text-align: center;
+  }
+
+  .img_sticker{
+    height: 8em;
+  }
+
+  .tilt-in-bl {
+	-webkit-animation: tilt-in-bl 0.65s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: tilt-in-bl 0.65s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-in-bck-center {
+	-webkit-animation: slide-in-bck-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bck-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.letreiro {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: cadetblue;
+}
+
+.letreiro>h1{
+  margin-top: 0.5em;
+}
+
+  @-webkit-keyframes flip-out-diag-1-bl {
+
+    0% {
+      -webkit-transform: rotate3d(1, 1, 0, 0deg);
+              transform: rotate3d(1, 1, 0, 0deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate3d(1, 1, 0, -70deg);
+              transform: rotate3d(1, 1, 0, -70deg);
+      opacity: 0;
+    }
+  }
+  @keyframes flip-out-diag-1-bl {
+    0% {
+      -webkit-transform: rotate3d(1, 1, 0, 0deg);
+              transform: rotate3d(1, 1, 0, 0deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: rotate3d(1, 1, 0, -70deg);
+              transform: rotate3d(1, 1, 0, -70deg);
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+  @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+  @-webkit-keyframes tilt-in-bl {
+    0% {
+      -webkit-transform: rotateY(35deg) rotateX(-20deg) translate(-250px, 250px) skew(-12deg, -15deg);
+              transform: rotateY(35deg) rotateX(-20deg) translate(-250px, 250px) skew(-12deg, -15deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+              transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes tilt-in-bl {
+    0% {
+      -webkit-transform: rotateY(35deg) rotateX(-20deg) translate(-250px, 250px) skew(-12deg, -15deg);
+              transform: rotateY(35deg) rotateX(-20deg) translate(-250px, 250px) skew(-12deg, -15deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+              transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes slide-in-bck-center {
+    0% {
+      -webkit-transform: translateZ(600px);
+              transform: translateZ(600px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bck-center {
+    0% {
+      -webkit-transform: translateZ(600px);
+              transform: translateZ(600px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+
+  .sign-link{
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+
+  #pole{
+    margin: 0 200px 0 200px;
+    border-radius: 1vw 1vw 0 0;
+    height: 20em;
+    width: 2em;
+    background-image:         url(https://www.tapi.co.uk/oimgnn/images_products/L_867_2ae050fb04ffffc191fc221ee5d7bb16-Maldives%20-%20Isola%20Bella%20Oak-867-pdp-large-800.jpg);
+    background-size: cover;
+    font-size: 1.5em;
+    @media (max-height: 400px){
+      transform: unset;
+      height: 400px;
+    }
+      }
+
+  #right, #left, #left_3{
+    background-image: url(placa.png);
+    background-size: cover;
+    height: 50px;
+    transform: translate(-70px, 50px) rotate(-7deg);
+    width: 204px;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    color: cadetblue;
+    justify-content: flex-end;
+  }
+
+
+  #right:after, #left:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 25px solid;
+    border-bottom: 25px solid transparent;
+    }
+
+    #right:before, #left:before{
+        content: '';
+        position: absolute;
+        right: -33px;
+        top: 1px;
+        bottom: 0;
+        width: 1px;
+        border-image: url(ponta.png) 50% 120%;
+        border-left: 35px solid black;
+        border-top: 25px solid white;
+        border-bottom: 25px solid white;
+    }
+
+  .sign-link {
+    font-family: 'Finger Paint', cursive;
+  }
+
+  #right_2, #left_2{
+    background-image: url(placa.png);
+    background-size: cover;
+    background-position: right;
+    height: 120px;
+    transform: translate(-180px, 50px) rotate(1deg);
+    width: 400px;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: cadetblue;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 30px;
+    flex-direction: column;
+  }
+
+  #right_2:after, #left_2:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 25px solid;
+    border-bottom: 25px solid transparent;
+    }
+
+    #right_2>p,#left_2>p{
+      padding: 1em;
+    }
+
+  .linha_letreiro{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #left{
+    transform: translate(-70px, 50px) rotate(-180deg);
+  }
+
+  #left>a{
+    transform: translate(-20px,0px) rotate(180deg);
+  }
+
+  #left_2{
+    transform: translate(-150px, 50px) rotate(-190deg);
+    height: 80px;
+  }
+
+  #left_2>p{
+    transform: translate(10px,10px) rotate(180deg);
+    text-align: left;
+  }
+
+  .container{
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    left: 0;
+    margin-top: 1em;
+}
+
+svg {
+    position: absolute;
+}
+
+#plane, .aviao {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+  }
+
+  @keyframes move {
+    0% {
+      offset-distance: 0%;
+      offset-rotate: auto 90deg;
+    }
+    40% {
+      offset-rotate: auto 30deg;
+    }
+    80% {
+      offset-rotate: auto 60deg;
+    }
+    100% {
+      offset-distance: 100%;
+      offset-rotate: auto 0deg;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .voar {
+      animation-name: move;
+      animation-duration: 20s;
+      animation-iteration-count: 1;
+      offset-path: path('M400,0 C40,600 1600,50 100,800');
+      animation: move 20s alternate ease-in-out;
+      animation-fill-mode: forwards;
+    }
+  }
+
+
+
