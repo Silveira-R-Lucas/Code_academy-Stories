@@ -1,17 +1,53 @@
 body{
   font-family: 'Just Another Hand', cursive;
 }
+.container-fluid>a, .navbar-nav>a{
+  font-size:40px;
+ }
+
+ .navbar-expand-lg .navbar-collapse {
+  justify-content: flex-end;
+ }
 
 main{
     background: url('fundo_main.jpg') no-repeat center center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 90vh;
+    height: 93vh;
 }
 
+.secao3{
+  background: url('cachoeira.jpg') no-repeat top center;
+  height: 80vh;
+  background-size: cover;
 
+}
+
+.secao_final{
+  background: url('trilha.jpg') no-repeat center center;
+  height: 80vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.secao_final>.btn {
+  background-color: #f7ba37d8;
+    border-color: beige;
+    color: black;
+    height: 10vh;
+    width: 40vw;
+    font-size: 3em;
+}
+
+.col-12>svg{
+  position: unset;
+}
 .anim750{
     transition: 1s ease-out;
 }
@@ -318,10 +354,10 @@ main{
   }
 
 
-  #pole{
+  #pole, #pole_2{
     margin: 0 200px 0 200px;
     border-radius: 1vw 1vw 0 0;
-    height: 20em;
+    height: 15em;
     width: 2em;
     background-image:         url(https://www.tapi.co.uk/oimgnn/images_products/L_867_2ae050fb04ffffc191fc221ee5d7bb16-Maldives%20-%20Isola%20Bella%20Oak-867-pdp-large-800.jpg);
     background-size: cover;
@@ -430,12 +466,12 @@ main{
     text-align: left;
   }
 
-  .container{
+  .letriro>.container{
     position: absolute;
     width: 50vw;
     height: 100vh;
     left: 0;
-    margin-top: 1em;
+    margin-top: 5em;
 }
 
 svg {
@@ -467,14 +503,517 @@ svg {
 
   @media (prefers-reduced-motion: no-preference) {
     .voar {
-      animation-name: move;
-      animation-duration: 20s;
       animation-iteration-count: 1;
       offset-path: path('M400,0 C40,600 1600,50 100,800');
-      animation: move 20s alternate ease-in-out;
+      animation: move 10s alternate ease-in-out;
       animation-fill-mode: forwards;
     }
   }
 
+  html.sr .load-hidden {
+    visibility: hidden;
+}
 
+.fotos_secao_3 {
+  width: 200px;
+  position: absolute;
+  top: -10vh;
+  left: -400px;
+  z-index: 0;
+  animation: translate-it 8s 0s infinite ease-in;
+  opacity: 0;
+  will-change: transform, offset-distance, opacity;
+}
+.animation .fotos_secao_3 {
+  transition: opacity 1.8s 2s ease-out;
+  opacity: .8;
+}
+.fotos_secao_3:nth-of-type(2) {
+  animation-delay: -3s;
+  transition-delay: .5s;
+  top: 10vh;
+}
+.fotos_secao_3:nth-of-type(3) {
+  animation-delay: -1.4s;
+  transition-delay: 1.5s;
+  top: 30vh;
+}
+.fotos_secao_3:nth-of-type(4) {
+  animation-delay: -3.9s;
+  transition-delay: .9s;
+}
+.fotos_secao_3:nth-of-type(5) {
+  animation-delay: -5.9s;
+  transition-delay: .2s;
+}
+
+@media all and (max-height: 40em) {
+  .fotos_secao_3:nth-of-type(2) {
+    top: 1rem;
+  }
+  .fotos_secao_3:nth-of-type(3) {
+    top: 3rem;
+  }
+}
+
+/**/
+@supports (offset-distance: 100%) {
+  .fotos_secao_3 {
+    offset-path: path("M 0,0 Q 300,100 450,80 Q 800,60 900,120 Q 1200,260 1350,220 Q 1500,190 1980,50");
+    offset-rotate: auto 20deg;
+    animation-name: offset-it, rotate-it30;
+  }
+  .fotos_secao_3:nth-of-type(odd) {
+    animation-name: offset-it, rotate-it-30;
+  }
+  .fotos_secao_3:nth-of-type(2) {
+    offset-path: path("M 0,0 C 200,100 300,200 400,150 C 500,100 600,200 1080,200 C 1280,200 1680,200 1980,0");
+  }
+  .fotos_secao_3:nth-of-type(3) {
+    offset-path: path("M 0,0 C 200,100 300,200 600,150 C 800,100 900,200 1080,200 C 1280,200 1680,200 1980,0");
+  }
+}
+/**/
+
+@keyframes translate-it {
+  100% {
+    transform: translateX(calc(100vw + 400px));
+  }
+}
+@keyframes offset-it {
+  100% {
+    offset-distance: 100%;
+  }
+}
+@keyframes rotate-it30 {
+  0% {
+    transform: rotateY(-20deg);
+  }
+  100% {
+    transform: rotateY(30deg);
+  }
+}
+@keyframes rotate-it-30 {
+  0% {
+    transform: rotateY(20deg);
+  }
+  100% {
+    transform: rotateY(-30deg);
+  }
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.svg_s3 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.letreiro_2 {
+  position: relative;
+  width: 100%;
+  max-width: 1980px;
+  height: 410px;
+  margin: 0 auto;
+  background: cadetblue;
+  overflow: hidden;
+  perspective: 300px;
+}
+.texto>h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5vh;
+  position:relative;
+  z-index:2;
+  text-shadow: 0 0 6px #294b4e;
+}
+.texto {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  position: absolute; 
+  top: 0;left:0;right:0;bottom:0;
+  z-index: 10;
+}
+.texto>p {
+  font-size: 4vmin;
+  letter-spacing: .075em;
+  padding: 0 2rem;
+  text-align: center;
+  line-height: 1.5;
+  position:relative;
+  text-shadow: 0 0 6px #294b4e;
+}
+
+
+@media only screen and (max-width: 768px){
+
+  .secao_final>.btn{
+    font-size: 1.4em ;
+  }
+  .secao3 .secao_final{
+    height: 60vh;
+  }
+  .texto>h1{
+    font-size: 25px;
+  }
+  #pole{
+    margin: 0 100px 0 100px;
+    height: 15em;
+  }
+
+  #right>a{
+    font-size: 18px;
+  }
+  #right{
+    justify-content: center;
+  }
+  #pole_2{
+    display: none;
+  }
+  #Awesome{
+    width: 240px;
+    height: 240px;
+  }
+  #right_2>p{
+    margin-top: revert;
+    font-size:10px;
+    padding: 2em;
+  }
+
+#Awesome{
+	position: relative;
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+  
+  backface-visibility: hidden;
+}
+
+#Awesome .sticky{
+	transform: rotate(45deg);
+}
+
+#Awesome:hover .sticky{
+	transform: rotate(10deg);
+}
+
+#Awesome .sticky{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:180px;
+	height: 180px;
+}
+
+#Awesome .reveal .circle{
+	box-shadow: 0 1px 0px rgb(0 0 0 / 15%);
+  line-height: 140px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#Awesome .reveal .circle{
+	background: #ffffff87;
+}
+
+#Awesome .circle_wrapper{
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+}
+
+#Awesome .circle{
+	position: absolute;
+	width: 140px;
+	height:  140px;
+	margin: 20px;
+	border-radius: 999px;
+  font-family: 'Just Another Hand', cursive;
+  font-size: 20px;
+}
+
+#Awesome .back{
+	height: 10px;
+	top: -3px;
+}
+
+#Awesome:hover .back{
+	height: 90px;
+	top: 110px;
+  margin-top: 0;
+}
+
+#Awesome .back .circle{
+	margin-top: -130px;
+	background-color: #fbec3f;
+
+	background-image: -webkit-linear-gradient(bottom, rgba(251,236,63,.0), rgba(255,255,255,.8));
+}
+
+#Awesome:hover .back .circle{
+	margin-top: -50px;
+}
+
+#Awesome .front{
+	height: 150px;
+	bottom: 0;
+	top: auto;
+}
+
+#Awesome:hover .front{
+	height: 70px;
+}
+
+#Awesome .front .circle{
+	margin-top: -10px;
+	background: #ffd900d5;
+
+	background-image: -webkit-linear-gradient(bottom, rgba(251,236,63,.0) 75%, #f7bb37 95%);
+  background-image: -moz-linear-gradient(bottom, rgba(251,236,63,.0) 75%, #f7bb37 95%);
+  background-image: linear-gradient(bottom, rgba(251,236,63,.0) 75%, #f7bb37 95%);
+}
+
+#Awesome h4{
+  text-align: center;
+	width: 180px;
+	transition: opacity 50ms linear 400ms;
+  font-size: 20px;
+}
+
+#Awesome:hover h4{
+	opacity: 0;
+	
+	transition: opacity 50ms linear 300ms;
+}
+
+#Awesome:hover .front .circle{
+	margin-top: -90px;
+	background-color: #ffd900d5;
+	background-position: 0 100px;
+}
+
+.img_sticker {
+  height: 3em;
+  margin-top: 30px;
+}
+
+.texto_topo_sticker {
+  position: absolute;
+  font-family: 'Just Another Hand', cursive;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.letreiro>h1 {
+  font-size: 25px;
+}
+#right_2, #left_2 {
+width: 300px;
+height: 100px;
+margin-left: 15px;
+font-size: 10px;
+}
+.voar {
+  animation-iteration-count: 1;
+  offset-path: path('M30,0 C40,600 800,100 100,800');
+  animation: move 10s alternate ease-in-out;
+  animation-fill-mode: forwards;
+}
+#right_2>p, #left_2>p {
+  margin-left: 6px;
+}
+}
+@media (min-width: 768px) and (max-width: 1024px){
+  .secao3 .secao_final{
+    height: 60vh;
+  }
+  #pole{
+    margin: 0 100px 0 100px;
+    height: 15em;
+  }
+
+  .texto>h1{
+    font-size: 25px;
+  }
+  #right>a{
+    font-size: 18px;
+  }
+  #right{
+    justify-content: center;
+  }
+  #pole_2{
+    display: none;
+  }
+  #Awesome{
+    width: 240px;
+    height: 240px;
+}
+#right_2>p, #left_2>p {
+  padding: 2em;
+}
+
+#Awesome{
+	position: relative;
+	width: 180px;
+	height: 180px;
+	margin: 0 auto;
+  
+  backface-visibility: hidden;
+}
+
+#Awesome .sticky{
+	transform: rotate(45deg);
+}
+
+#Awesome:hover .sticky{
+	transform: rotate(10deg);
+}
+
+#Awesome .sticky{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:180px;
+	height: 180px;
+}
+
+#Awesome .reveal .circle{
+	box-shadow: 0 1px 0px rgb(0 0 0 / 15%);
+  line-height: 140px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#Awesome .reveal .circle{
+	background: #ffffff87;
+}
+
+#Awesome .circle_wrapper{
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+}
+
+#Awesome .circle{
+	position: absolute;
+	width: 140px;
+	height:  140px;
+	margin: 20px;
+	border-radius: 999px;
+  font-family: 'Just Another Hand', cursive;
+  font-size: 20px;
+}
+
+#Awesome .back{
+	height: 10px;
+	top: -3px;
+}
+
+#Awesome:hover .back{
+	height: 90px;
+	top: 110px;
+  margin-top: 0;
+}
+
+#Awesome .back .circle{
+	margin-top: -130px;
+	background-color: #fbec3f;
+
+	background-image: -webkit-linear-gradient(bottom, rgba(251,236,63,.0), rgba(255,255,255,.8));
+}
+
+#Awesome:hover .back .circle{
+	margin-top: -50px;
+}
+
+#Awesome .front{
+	height: 150px;
+	bottom: 0;
+	top: auto;
+}
+
+#Awesome:hover .front{
+	height: 70px;
+}
+
+#Awesome .front .circle{
+	margin-top: -10px;
+	background: #ffd900d5;
+
+	background-image: -webkit-linear-gradient(bottom, rgba(251,236,63,.0) 75%, #f7bb37 95%);
+  background-image: -moz-linear-gradient(bottom, rgba(251,236,63,.0) 75%, #f7bb37 95%);
+  background-image: linear-gradient(bottom, rgba(251,236,63,.0) 75%, #f7bb37 95%);
+}
+
+#Awesome h4{
+  text-align: center;
+	width: 180px;
+	transition: opacity 50ms linear 400ms;
+  font-size: 20px;
+}
+
+#Awesome:hover h4{
+	opacity: 0;
+	
+	transition: opacity 50ms linear 300ms;
+}
+
+#Awesome:hover .front .circle{
+	margin-top: -90px;
+	background-color: #ffd900d5;
+	background-position: 0 100px;
+}
+
+.img_sticker {
+  height: 3em;
+  margin-top: 30px;
+}
+
+.texto_topo_sticker {
+  position: absolute;
+  font-family: 'Just Another Hand', cursive;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.letreiro>h1 {
+  font-size: 25px;
+}
+#right_2, #left_2 {
+height: 170px;
+width: 300px;
+}
+.voar {
+  animation-iteration-count: 1;
+  offset-path: path('M30,0 C40,600 800,100 100,800');
+  animation: move 10s alternate ease-in-out;
+  animation-fill-mode: forwards;
+}
+#right_2>p, #left_2>p {
+  margin-left: 6px;
+}
+}
 
