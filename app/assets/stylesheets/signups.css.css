@@ -1,0 +1,47 @@
+.jumbotron{
+    background: url('fundo_main.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 93vh;
+}
+
+.signup_container{
+    background-color: rgb(255 218 10 / 48%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    border-radius: 30px;
+    height: 300px;
+    justify-content: space-evenly;
+}
+
+.signup_container>h1{
+    font-size: 2.5em;
+}
+
+.signup_container>p{
+    font-size: 1.5em;
+}
+
+input{
+    width: 250px;
+    font-size: 20px;
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-style:italic;
+}
+
+.btn{
+    font-size: 30px;
+    border-color: black;
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+}

@@ -4,4 +4,14 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root "pages#home"
+
+  get '/about' => 'pages#about'
+
+  get '/home' => 'pages#home'
+
+  get '/contato' => 'signups#new'
+
+  resources :signups
+
+  get '/thanks' => 'pages#thanks'  
 end

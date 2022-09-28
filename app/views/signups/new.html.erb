@@ -1,0 +1,15 @@
+ <div class="jumbotron">
+      <div class="signup_container">
+        <h1>FIQUE CONECTADO</h1>
+        <p>RECEBA NOVIDADES </br>SOBRE NOVOS PASSEIOS.</p>
+
+
+        <%= form_for(@signup) do |f| %>
+              <%= f.text_field :firstname, :placeholder => "Nome" %><br>
+              <%= f.text_field :email, :placeholder => "seuemail@host.com" %><br>
+              <%= f.submit "Junte-se a nós", :class =>'btn' %>
+        <% end %>
+
+
+      </div>
+  </div>

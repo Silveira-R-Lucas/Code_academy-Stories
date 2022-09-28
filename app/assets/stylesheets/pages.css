@@ -4,12 +4,28 @@ body{
 .container-fluid>a, .navbar-nav>a{
   font-size:40px;
  }
+ 
+ .img-fluid {
+  max-width: 100%;
+  height: 474px;
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  margin-top: 2em;
+}
+
+.col-lg-4 {
+  flex: 0 0 auto;
+  width: 25%;
+}
 
  .navbar-expand-lg .navbar-collapse {
   justify-content: flex-end;
  }
 
-main{
+main, .about{
     background: url('fundo_main.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
@@ -19,7 +35,49 @@ main{
     height: 93vh;
 }
 
-.secao3{
+
+.about>h1{
+  position: absolute;
+  top: 20rem;
+}
+
+.image_about{
+  width:60px;
+}
+
+#portfolio, .letreiro_about, .portfolio{
+  background: radial-gradient(#05516000,#5b8589);
+}
+#circle {
+  background:rgba(255, 218, 10, 0.767);
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-around;
+}
+
+#circle>img {
+  height: 4em;
+}
+
+.letreiro>.btn{
+  background-color: #39e23978;
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 2em;
+  margin: 1vw;
+}
+
+.secao3{    
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: url('cachoeira.jpg') no-repeat top center;
   height: 80vh;
   background-size: cover;
@@ -78,15 +136,27 @@ main{
       margin-top: 2em;
   }
 
+  .sticky>a{
+    left: 3em;
+    position: absolute;
+    font-size: 2.5em;
+    top: 3em;
+    color:#0066ff00;
+    -webkit-transition: color 1s; /* For Safari 3.0 to 6.0 */
+    transition: color 1s; /* For modern browsers */
+  }
+
+  .sticky:hover>a{
+    color: #0d6efd;
+}
+
   #Awesome .reveal .circle{
     box-shadow: 0 1px 0px rgba(0,0,0,.15);
     line-height: 280px;
     text-align: center;
+    background: #ffffff7a;
   }
 
-  #Awesome .reveal .circle{
-      background: #ffffff87;
-  }
 
   #Awesome .circle_wrapper{
       position: absolute;
@@ -121,18 +191,15 @@ main{
   #Awesome .back .circle{
       margin-top: -260px;
       background-color: #fbec3f;
-      background-image: -webkit-linear-gradient(bottom, rgba(251,236,63,.0), rgba(255,255,255,.8));
+      background-image: -webkit-linear-gradient(bottom, rgba(251,236,63,.0), rgba(255, 218, 10, 0.829));
   }
 
   #Awesome:hover .back .circle{
         margin-top: -100px;
-        -webkit-animation: wobble-hor-bottom 1.3s both;
-        animation: wobble-hor-bottom 1.3s both;
+        -webkit-animation: wobble-hor-bottom 1.5s both;
+        animation: wobble-hor-bottom 1.5s both;
     }
 
-  #Awesome:hover{
-    cursor: pointer;
-  }
 
   #Awesome .front{
       height: 300px;
@@ -170,7 +237,7 @@ main{
 
   #Awesome:hover .img_sticker{
     opacity: 0;
-    transition: opacity 1s linear 300ms;
+    transition: opacity 1.5s linear 300ms;
     -webkit-animation: flip-out-diag-1-bl 0.45s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: flip-out-diag-1-bl 0.45s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   }
@@ -205,11 +272,18 @@ main{
   display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: cadetblue;
 }
 
-.letreiro>h1{
-  margin-top: 0.5em;
+#portfolio, .letreiro, .portfolio{
+  background-color: cadetblue;
+}
+
+.letreiro>h1, .letreiro>h2{
+  margin-top: 1em;
+}
+
+.letreiro>h2{
+  padding: 2em;
 }
 
   @-webkit-keyframes flip-out-diag-1-bl {
@@ -478,10 +552,11 @@ svg {
     position: absolute;
 }
 
-#plane, .aviao {
+#plane{
     position: absolute;
     width: 40px;
     height: 40px;
+    z-index: 1;
   }
 
   @keyframes move {
@@ -622,7 +697,6 @@ svg {
 .letreiro_2 {
   position: relative;
   width: 100%;
-  max-width: 1980px;
   height: 410px;
   margin: 0 auto;
   background: cadetblue;
@@ -659,6 +733,15 @@ svg {
 
 
 @media only screen and (max-width: 768px){
+
+  .letreiro>.btn {
+    width: 70vw;
+  }
+  
+  .sticky>a{
+    font-size: 1.4em;
+    left: 2em;
+  }
 
   .secao_final>.btn{
     font-size: 1.4em ;
@@ -842,6 +925,16 @@ font-size: 10px;
 }
 }
 @media (min-width: 768px) and (max-width: 1024px){
+
+  .letreiro>.btn {
+    width: 70vw;
+  }
+
+  .sticky>a{
+    font-size: 1.4em;
+    left: 2em;
+  }
+
   .secao3 .secao_final{
     height: 60vh;
   }
