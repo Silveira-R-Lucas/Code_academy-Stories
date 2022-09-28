@@ -3,9 +3,17 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 93vh;
+}
+
+.jumbotron>button{
+    width: 300px;
+    background-color: #00d38c8c;
+    display: flex;
+    flex-direction: row;
+    height: 70px;
 }
 
 .signup_container{
